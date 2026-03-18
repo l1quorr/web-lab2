@@ -8,6 +8,7 @@
 </head>
 <body>
     <header>
+        <button id="theme-toggle" style="position: absolute; top: 20px; right: 20px; padding: 8px 12px; background-color: #333; color: white; border: none; border-radius: 4px; cursor: pointer;">Змінити тему</button>
         <h1>Андрій Леонов</h1>
         <p>Студент спеціальності "Кібербезпека" (Львівська Політехніка)</p>
         <nav>
@@ -53,10 +54,38 @@
             <p>Спеціальність 125 "Кібербезпека та захист інформації"</p>
             <p><em>Вересень 2023 — Теперішній час</em></p>
         </section>
+    <section class="mt-10">
+    <h2 class="uppercase text-xl border-y border-dashed border-gray-600 py-2 mb-4 font-bold">Відгуки роботодавців</h2>
+    <div id="comments-container"></div>
+</section>
     </main>
 
     <footer>
         <p>&copy; 2026 Андрій Леонов.</p>
+        <p id="system-info" style="font-size: 0.8rem; color: gray; margin-top: 10px;"></p>
     </footer>
+    <div id="feedback-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <h2 style="margin-bottom: 15px;">Залиште відгук</h2>
+            
+            <form action="https://formspree.io/f/xaqpaqzr" method="POST">
+                <label>Ім'я:</label>
+                <input type="text" name="name" required>
+                
+                <label>email:</label>
+                <input type="email" name="email" required>
+                
+                <label>Телефон:</label>
+                <input type="tel" name="phone">
+                
+                <label>Повідомлення:</label>
+                <textarea name="message" rows="4" required></textarea>
+                
+                <button type="submit">Відправити</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

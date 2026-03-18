@@ -1,1 +1,44 @@
 @import "tailwindcss";
+
+/* базові стилі для темної теми   */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+body.dark-mode h2, 
+body.dark-mode footer,
+body.dark-mode div {
+  border-color: #444;
+}
+
+body.dark-mode .text-black,
+body.dark-mode .text-gray-700,
+body.dark-mode .text-gray-800,
+body.dark-mode .text-gray-600 {
+  color: #f0f0f0;
+}
+
+body.dark-mode button[title="змінити тему"] {
+  color: #fbbf24;
+}
+
+
+/* коригування для модульного вікна */
+
+body.dark-mode .bg-white * {
+  color: #000000;
+}
+
+body.dark-mode .bg-white input,
+body.dark-mode .bg-white textarea {
+  color: #000000;
+  border-color: #d1d5db; 
+  background-color: #ffffff;
+}
+
+
+body.dark-mode .bg-white button[type="submit"] {
+  background-color: #ea580c; 
+  color: #ffffff;
+}
